@@ -632,27 +632,26 @@ struct name_Signup: View {
                     AlertTitle = "회원가입에 성공 했습니다."
                     showAlert.toggle()
                     print("Response message: \(response)")
-                            switchToLoginMain()
+                            sendLogin(email, password)
                         }
                 
             case .failure(let error):
                 AlertTitle = "회원가입에 실패 했습니다."
                 showAlert.toggle()
                 print("Error: \(error.localizedDescription)")
-                switchToLoginMain()
+               
             }
         }
     
         
     }
     
-
     
     
-    func switchToLoginMain() {
+    func switchToMain() {
         
-    
-          let newView = LoginMain()
+
+        let newView = PostList()
         let rootView = UIHostingController(rootView: newView)
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                   let window = windowScene.windows.first
@@ -662,6 +661,38 @@ struct name_Signup: View {
             window.rootViewController = rootView
             window.makeKeyAndVisible()
         }
+    
+    
+    
+    func sendLogin(_ email: String,_ password: String){
+        let request = loginRequest(email: email, password: password)
+        let keychain = KeyChain()// jwt 저장을 위한 keychain 클래스
+        httpclient.sendLoginRequest(request: request) { result in
+            switch result {
+            case .success(let response):
+                
+                
+                DispatchQueue.main.async {
+                    
+                    print("Response message: \(response)")
+                    if(keychain.addItem(key: "refreshToken", pwd: response.data.refreshToken) == true && keychain.addItem(key: "accessToken", pwd: response.data.accessToken)){
+                        switchToMain()
+                    }
+                        }
+                
+            case .failure(let error):
+               
+                print("Error: \(error.localizedDescription)")
+                
+            }
+        }
+    
+        
+    }
+    
+
+    
+    
     
      
     
