@@ -1,0 +1,158 @@
+{
+    "status": 200,
+    "message": "게시글 불러오기 성공",
+    "data": [
+        {
+            "id": 13,
+            "title": "김의진",
+            "writer": "역동적인 하마",
+            "content": "ㅎㅇ",
+            "view_cnt": 4,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                3,
+                6,
+                11,
+                58,
+                50,
+                187611000
+            ]
+        },
+        {
+            "id": 8,
+            "title": "하이",
+            "writer": "알맞은 흰 곰",
+            "content": "하이",
+            "view_cnt": 6,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                3,
+                1,
+                20,
+                58,
+                11,
+                381315000
+            ]
+        },
+        {
+            "id": 7,
+            "title": "하이루",
+            "writer": "알맞은 흰 곰",
+            "content": "하이루",
+            "view_cnt": 1,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                3,
+                1,
+                20,
+                12,
+                14,
+                952782000
+            ]
+        },
+        {
+            "id": 6,
+            "title": "조태완 계정 해킹함 ",
+            "writer": "낭만적인 소",
+            "content": "ㅋ",
+            "view_cnt": 4,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                13,
+                16,
+                34,
+                239135000
+            ]
+        },
+        {
+            "id": 5,
+            "title": "가자가자가 가자고",
+            "writer": "바람직한 해마",
+            "content": "우와",
+            "view_cnt": 3,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                13,
+                9,
+                28,
+                784722000
+            ]
+        },
+        {
+            "id": 4,
+            "title": "이게 왜 작동함?",
+            "writer": "알맞은 흰 곰",
+            "content": "진짜 어이없네;",
+            "view_cnt": 1,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                4,
+                31,
+                4,
+                878506000
+            ]
+        },
+        {
+            "id": 3,
+            "title": "아 뜨밤 뭔데;",
+            "writer": "알맞은 흰 곰",
+            "content": "뜨밤뜨밤 뜨거운 밤 ㅎ ㅎ",
+            "view_cnt": 3,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                4,
+                29,
+                9,
+                47636000
+            ]
+        },
+        {
+            "id": 2,
+            "title": "오",
+            "writer": "역동적인 하마",
+            "content": "뭘 고친거죠?",
+            "view_cnt": 0,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                4,
+                25,
+                24,
+                376886000
+            ]
+        },
+        {
+            "id": 1,
+            "title": "hello,world",
+            "writer": "알맞은 흰 곰",
+            "content": "hello,world",
+            "view_cnt": 11,
+            "noticeYn": false,
+            "modified_date": [
+                2023,
+                2,
+                26,
+                3,
+                57,
+                24
+            ]
+        }
+    ]
+}
