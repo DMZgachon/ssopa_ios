@@ -24,7 +24,7 @@ struct PostList: View {
                 let decoder = JSONDecoder()
                 if let decodedResponse = try? decoder.decode(Post_Data.self, from: data) {
                     DispatchQueue.main.async {
-                        self.Posts += decodedResponse.data
+                        self.Posts = decodedResponse.data
                         self.isLoading = false
                     }
                 }
@@ -32,10 +32,7 @@ struct PostList: View {
         }.resume()
     }
     
-    
-    func initPost(){
-        Posts = []
-    }
+   
 
     
     
@@ -133,7 +130,7 @@ struct PostList: View {
         }.onChange(of: selectedTab) { newTab in
             // Call your function here
             print("Selected tab: \(newTab)")
-            initPost()
+           
         }
         
     }

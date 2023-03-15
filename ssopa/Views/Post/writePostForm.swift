@@ -37,19 +37,19 @@ struct writePostForm: View {
                 Divider()
                 HStack{
                     Text("게시판 선택")
-                }
+                }.padding(EdgeInsets(top: 0, leading: 8.0, bottom: 0, trailing: 0))
                 Divider()
                 HStack{
                     TextField("제목", text: $title)
                         .font(Font.headline)
                     
-                }
+                }.padding(EdgeInsets(top: 0, leading: 8.0, bottom: 0, trailing: 0))
                 Divider()
                 ScrollView {
                     HStack{
                         TextField("내용", text: $content )
                             .keyboardType(UIKeyboardType.default)
-                    }
+                    }.padding(EdgeInsets(top: 0, leading: 8.0, bottom: 0, trailing: 0))
                 }
                 Spacer()
             }
