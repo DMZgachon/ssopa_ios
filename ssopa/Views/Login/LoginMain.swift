@@ -18,7 +18,7 @@ struct LoginMain: View {
     
             VStack {
                 Spacer()
-                Text("SSOPA 와 함께하는 학교 생활")
+                Text("SSOPA 와 함께하는 학교 생활!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color.ssopa_orange)

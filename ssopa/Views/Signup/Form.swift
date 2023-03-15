@@ -202,7 +202,7 @@ struct passwordForm_Login: View {
             case .failure(let error):
                
                 print("Error: \(error.localizedDescription)")
-                switchToMain()
+            
             }
         }
     
