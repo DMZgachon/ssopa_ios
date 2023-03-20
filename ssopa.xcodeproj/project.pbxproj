@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B919D84429C17A3600AEE115 /* getNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */; };
 		B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713729BA165800B0F4EA /* ssopaApp.swift */; };
 		B928713A29BA165800B0F4EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713929BA165800B0F4EA /* ContentView.swift */; };
 		B928713C29BA165A00B0F4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928713B29BA165A00B0F4EA /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 		B94008AF29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */; };
 		B94008B429BB384B00ECE9E7 /* getNicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94008B329BB384B00ECE9E7 /* getNicknameResponse.swift */; };
 		B94271BA29BA3AC000FF4E9D /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271B929BA3AC000FF4E9D /* LandmarkList.swift */; };
-		B94271BC29BA3BFA00FF4E9D /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271BB29BA3BFA00FF4E9D /* LandmarkDetail.swift */; };
 		B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271BD29BA472900FF4E9D /* FavoriteButton.swift */; };
 		B94271C329BA4E8C00FF4E9D /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271C229BA4E8C00FF4E9D /* LoginMain.swift */; };
 		B94271C529BA50AB00FF4E9D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271C429BA50AB00FF4E9D /* LoginButton.swift */; };
@@ -69,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = getNicknameViewModel.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/getNicknameViewModel.swift"; sourceTree = "<group>"; };
 		B928713429BA165800B0F4EA /* ssopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928713729BA165800B0F4EA /* ssopaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssopaApp.swift; sourceTree = "<group>"; };
 		B928713929BA165800B0F4EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDupliatedEmailViewModel.swift; sourceTree = "<group>"; };
 		B94008B329BB384B00ECE9E7 /* getNicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getNicknameResponse.swift; sourceTree = "<group>"; };
 		B94271B929BA3AC000FF4E9D /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
-		B94271BB29BA3BFA00FF4E9D /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		B94271BD29BA472900FF4E9D /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		B94271C229BA4E8C00FF4E9D /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
 		B94271C429BA50AB00FF4E9D /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
@@ -221,6 +221,7 @@
 		B928E88229BA3784007408CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */,
 				B928E87D29BA34B2007408CD /* Landmark.swift */,
 				B928E87F29BA35E7007408CD /* ModelData.swift */,
 				B94271CC29BA5F9000FF4E9D /* UserProfile.swift */,
@@ -277,7 +278,6 @@
 			children = (
 				B9E5997E29BA387700B32B5E /* LandmarkRow.swift */,
 				B94271B929BA3AC000FF4E9D /* LandmarkList.swift */,
-				B94271BB29BA3BFA00FF4E9D /* LandmarkDetail.swift */,
 			);
 			path = Landmarks;
 			sourceTree = "<group>";
@@ -489,9 +489,9 @@
 				B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */,
 				B94271C929BA557300FF4E9D /* ColorExtension.swift in Sources */,
 				B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */,
+				B919D84429C17A3600AEE115 /* getNicknameViewModel.swift in Sources */,
 				B94008A829BB052C00ECE9E7 /* Post.swift in Sources */,
 				B94271BA29BA3AC000FF4E9D /* LandmarkList.swift in Sources */,
-				B94271BC29BA3BFA00FF4E9D /* LandmarkDetail.swift in Sources */,
 				B9A904EF29BF332E00E47E2F /* signUpResponse.swift in Sources */,
 				B94271CB29BA56EB00FF4E9D /* signupButton.swift in Sources */,
 				B928716229BA27D700B0F4EA /* CircleImage.swift in Sources */,
