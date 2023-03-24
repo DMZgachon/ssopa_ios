@@ -252,8 +252,11 @@ class HTTPClient {
     // json을 Post_data 타입으로 파싱
     func loadposts (_ category: String, _ page: Int) async throws -> Post_Data {
             do {
+                let keychain = KeyChain()
                 let url = URL.forLoadPosts(page, category)!
-                let (data, _) = try await URLSession.shared.data(from: url)
+                var request = URLRequest(url: url)
+                request.addValue("Bearer \(keychain.getItem(key: "accessToken") ?? "null")", forHTTPHeaderField: "Authorization")
+                let (data, _) = try await URLSession.shared.data(for: request)
                 return try JSONDecoder().decode(Post_Data.self, from: data)
             } catch {
                 fatalError("Unable to parse data : \(error)")
