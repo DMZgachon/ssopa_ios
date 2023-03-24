@@ -19,6 +19,7 @@ struct PostRow: View {
         
         
         VStack {
+            Divider()
             HStack{
                 VStack(alignment: .leading){
                     Text(post.title)

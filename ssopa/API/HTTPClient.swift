@@ -16,7 +16,7 @@ enum NetworkError: Error {
 // 2
 class HTTPClient {
     
-   
+   static let shared = HTTPClient()
 
     
     func sendSignUpRequest(request: signUpRequest, completion: @escaping (Result<signUpResponse, Error>) -> Void) {
@@ -248,4 +248,15 @@ class HTTPClient {
             
         }.resume()
     }
+    
+    // json을 Post_data 타입으로 파싱
+    func loadposts (_ category: String, _ page: Int) async throws -> Post_Data {
+            do {
+                let url = URL.forLoadPosts(page, category)!
+                let (data, _) = try await URLSession.shared.data(from: url)
+                return try JSONDecoder().decode(Post_Data.self, from: data)
+            } catch {
+                fatalError("Unable to parse data : \(error)")
+            }
+        }
 }

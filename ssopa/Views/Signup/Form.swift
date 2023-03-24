@@ -170,7 +170,7 @@ struct passwordForm_Login: View {
     func switchToMain() {
         
 
-        let newView = PostList()
+        let newView = PostList().environmentObject(postViewModel())
         let rootView = UIHostingController(rootView: newView)
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                   let window = windowScene.windows.first

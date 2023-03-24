@@ -12,57 +12,26 @@ import SwiftUI
 struct PostList: View {
     
     
-
-    func fetchPosts(_ page: Int, _ category: String) {
-        let keychain = KeyChain()
-        guard let url = URL.forLoadPosts(page, category) else { return }
-        var request = URLRequest(url: url)
-        request.addValue("Bearer \(keychain.getItem(key: "accessToken") ?? "null")", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                if let decodedResponse = try? decoder.decode(Post_Data.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.Posts = decodedResponse.data
-                        self.isLoading = false
-                    }
-                }
-            }
-        }.resume()
-    }////
     
-   
-
     
     
     @State private var selectedTab = 0
-       
-    @State private var isPresentingWriteForm = false
-    @State private var page: Int = 0
     
-    @State private var isLoading = false
-
-    @State private var Posts: [Post_Data.Post] = []
-
+    @State private var isPresentingWriteForm = false
+    
+    @EnvironmentObject var postVm: postViewModel
+    
+    
     static var getdata = ModelData().postdata
     
     var body: some View {
         
         
         TabView(selection: $selectedTab) {
-            NavigationView {
-                ZStack {
-                    List{
-                        ForEach(Posts){ Post in
-                            NavigationLink{
-                                PostDetailView(post: Post)
-                            } label: {
-                                PostRow(post: Post)
-                            }
-                        }
+            NavigationView{
+                ZStack{
+                    freeBoardView().environmentObject(postVm)
                         .navigationTitle("자유게시판")
-                    }
                     VStack {
                         Spacer()
                         HStack {
@@ -80,18 +49,16 @@ struct PostList: View {
                             .padding()
                         }
                     }
+
                 }
                 .sheet(isPresented: $isPresentingWriteForm) {
                     writePostForm(isPresented: $isPresentingWriteForm)
                 }
-                .onAppear {
-                    fetchPosts(0, "test")
-                }
             }
-            .tabItem {
-                Image(systemName: "signpost.left.fill")
-                Text("자유게시판")
-            }.tag(0)
+                .tabItem {
+                    Image(systemName: "signpost.left.fill")
+                    Text("자유게시판")
+                }.tag(0)
             
             NavigationView {
                 List {
@@ -130,23 +97,25 @@ struct PostList: View {
         }.onChange(of: selectedTab) { newTab in
             // Call your function here
             print("Selected tab: \(newTab)")
-           
+            
         }
         
     }
-        
-
-}
-
-struct PostList_Previews: PreviewProvider {
-    static var getdata = ModelData().postdata
-    static var previews: some View {
-
+    
+    
+    
+    
+    struct PostList_Previews: PreviewProvider {
+        static var getdata = ModelData().postdata
+        static var previews: some View {
+            
             // 커밋테스트
-        ForEach(["iPhone SE (2nd generation)", "iPhone 14 Pro"], id: \.self) { deviceName in
-            PostList()
-                        .previewDisplayName(deviceName)
-                        .environmentObject(ModelData())
-                }
+            ForEach(["iPhone SE (2nd generation)", "iPhone 14 Pro"], id: \.self) { deviceName in
+                PostList()
+                    .previewDisplayName(deviceName)
+                    .environmentObject(ModelData())
+                    .environmentObject(postViewModel())
+            }
+        }
     }
 }

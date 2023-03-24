@@ -12,6 +12,14 @@ struct writePostForm: View {
     @State private var content = ""
     @State private var title = ""
     @Binding var isPresented: Bool
+    @State private var selectedBoard: Board = .free
+    
+    enum Board: String, CaseIterable {
+        case free = "자유게시판"
+        case secret = "비밀게시판"
+        // Add more board options here
+    }
+    
     
     var body: some View {
             
@@ -35,9 +43,11 @@ struct writePostForm: View {
                 }
                 .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
                 Divider()
-                HStack{
-                    Text("게시판 선택")
-                }.padding(EdgeInsets(top: 0, leading: 8.0, bottom: 0, trailing: 0))
+                Picker("게시판 선택", selection: $selectedBoard) {
+                                ForEach(Board.allCases, id: \.self) { board in
+                                    Text(board.rawValue)
+                                }
+                            }
                 Divider()
                 HStack{
                     TextField("제목", text: $title)

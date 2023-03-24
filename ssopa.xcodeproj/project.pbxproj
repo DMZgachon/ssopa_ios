@@ -47,6 +47,8 @@
 		B9A904F829BF60ED00E47E2F /* writePostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904F729BF60ED00E47E2F /* writePostForm.swift */; };
 		B9ABBEAB29BB78540072F603 /* postData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9ABBEAA29BB78540072F603 /* postData.json */; };
 		B9ABBEAD29BB79950072F603 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABBEAC29BB79950072F603 /* PostRow.swift */; };
+		B9C62EC129CDFBFC00426747 /* postVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC029CDFBFC00426747 /* postVm.swift */; };
+		B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC229CDFF0B00426747 /* freeBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		B9A904F729BF60ED00E47E2F /* writePostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writePostForm.swift; sourceTree = "<group>"; };
 		B9ABBEAA29BB78540072F603 /* postData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = postData.json; sourceTree = "<group>"; };
 		B9ABBEAC29BB79950072F603 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
+		B9C62EC029CDFBFC00426747 /* postVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postVm.swift; sourceTree = "<group>"; };
+		B9C62EC229CDFF0B00426747 /* freeBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		B928713629BA165800B0F4EA /* ssopa */ = {
 			isa = PBXGroup;
 			children = (
+				B9C62EBF29CDFBCE00426747 /* ViewModel */,
 				B9A904F429BF458100E47E2F /* Auth */,
 				B940089F29BAFFF000ECE9E7 /* Info.plist */,
 				B94271D629BA6DBF00FF4E9D /* API */,
@@ -264,6 +269,7 @@
 				B9ABBEAC29BB79950072F603 /* PostRow.swift */,
 				B9377D7329BB8C4200F2E3C0 /* PostList.swift */,
 				B9A904F729BF60ED00E47E2F /* writePostForm.swift */,
+				B9C62EC229CDFF0B00426747 /* freeBoardView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -322,6 +328,14 @@
 				B9A904F529BF458D00E47E2F /* KeyChain.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		B9C62EBF29CDFBCE00426747 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9C62EC029CDFBFC00426747 /* postVm.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +472,7 @@
 			files = (
 				B9A904F129BF42CF00E47E2F /* loginRequest.swift in Sources */,
 				B94271D029BA608A00FF4E9D /* ProfileHost.swift in Sources */,
+				B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */,
 				B928713A29BA165800B0F4EA /* ContentView.swift in Sources */,
 				B9A904F829BF60ED00E47E2F /* writePostForm.swift in Sources */,
 				B94271D229BA611000FF4E9D /* ProfileSummary.swift in Sources */,
@@ -472,6 +487,7 @@
 				B94008AF29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift in Sources */,
 				B94008A429BB00DB00ECE9E7 /* URLExtensions.swift in Sources */,
 				B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */,
+				B9C62EC129CDFBFC00426747 /* postVm.swift in Sources */,
 				B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */,
 				B94271C929BA557300FF4E9D /* ColorExtension.swift in Sources */,
 				B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */,
