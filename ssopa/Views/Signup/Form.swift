@@ -156,7 +156,7 @@ struct passwordForm_Login: View {
     @ObservedObject private var getNicknameVM: getNicknameViewModel
     @State private var password = ""
     var email: String
-    let httpclient = HTTPClient()
+    let httpclient = HTTPClient.shared
     
     
     init(email: String) {
@@ -426,7 +426,7 @@ struct numberForm_Signup: View {
     }
     
     func sendSms(_ number: String) {
-        let httpClient = HTTPClient()
+        let httpClient = HTTPClient.shared
         httpClient.sendSms(number) { result in
             switch result {
                 case .success(let response):
@@ -524,7 +524,7 @@ struct verification_Signup: View {
     
     
     func checkCode(_ number: String,_ code: String) {
-        let httpClient = HTTPClient()
+        let httpClient = HTTPClient.shared
         httpClient.checkSmsCode(number,code) { result in
             switch result {
                 case .success(let response):
@@ -616,7 +616,7 @@ struct name_Signup: View {
     @State var showAlert: Bool = false
     @State var AlertTitle: String  = ""
     @State private var name = ""
-    let httpclient = HTTPClient()
+    let httpclient = HTTPClient.shared
    
     
     
