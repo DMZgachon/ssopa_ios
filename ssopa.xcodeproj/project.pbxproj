@@ -28,7 +28,6 @@
 		B94008AD29BB09CF00ECE9E7 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94008AC29BB09CF00ECE9E7 /* PostDetailView.swift */; };
 		B94008AF29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */; };
 		B94008B429BB384B00ECE9E7 /* getNicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94008B329BB384B00ECE9E7 /* getNicknameResponse.swift */; };
-		B94271BA29BA3AC000FF4E9D /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271B929BA3AC000FF4E9D /* LandmarkList.swift */; };
 		B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271BD29BA472900FF4E9D /* FavoriteButton.swift */; };
 		B94271C329BA4E8C00FF4E9D /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271C229BA4E8C00FF4E9D /* LoginMain.swift */; };
 		B94271C529BA50AB00FF4E9D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271C429BA50AB00FF4E9D /* LoginButton.swift */; };
@@ -48,7 +47,6 @@
 		B9A904F829BF60ED00E47E2F /* writePostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904F729BF60ED00E47E2F /* writePostForm.swift */; };
 		B9ABBEAB29BB78540072F603 /* postData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9ABBEAA29BB78540072F603 /* postData.json */; };
 		B9ABBEAD29BB79950072F603 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABBEAC29BB79950072F603 /* PostRow.swift */; };
-		B9E5997F29BA387700B32B5E /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5997E29BA387700B32B5E /* LandmarkRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +92,6 @@
 		B94008AC29BB09CF00ECE9E7 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDupliatedEmailViewModel.swift; sourceTree = "<group>"; };
 		B94008B329BB384B00ECE9E7 /* getNicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getNicknameResponse.swift; sourceTree = "<group>"; };
-		B94271B929BA3AC000FF4E9D /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		B94271BD29BA472900FF4E9D /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		B94271C229BA4E8C00FF4E9D /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
 		B94271C429BA50AB00FF4E9D /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 		B9A904F729BF60ED00E47E2F /* writePostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writePostForm.swift; sourceTree = "<group>"; };
 		B9ABBEAA29BB78540072F603 /* postData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = postData.json; sourceTree = "<group>"; };
 		B9ABBEAC29BB79950072F603 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
-		B9E5997E29BA387700B32B5E /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +209,6 @@
 				B94271C129BA4E6B00FF4E9D /* Login */,
 				B928713929BA165800B0F4EA /* ContentView.swift */,
 				B94271C029BA48C300FF4E9D /* Helpers */,
-				B94271BF29BA48A000FF4E9D /* Landmarks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,15 +266,6 @@
 				B9A904F729BF60ED00E47E2F /* writePostForm.swift */,
 			);
 			path = Post;
-			sourceTree = "<group>";
-		};
-		B94271BF29BA48A000FF4E9D /* Landmarks */ = {
-			isa = PBXGroup;
-			children = (
-				B9E5997E29BA387700B32B5E /* LandmarkRow.swift */,
-				B94271B929BA3AC000FF4E9D /* LandmarkList.swift */,
-			);
-			path = Landmarks;
 			sourceTree = "<group>";
 		};
 		B94271C029BA48C300FF4E9D /* Helpers */ = {
@@ -491,7 +477,6 @@
 				B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */,
 				B919D84429C17A3600AEE115 /* getNicknameViewModel.swift in Sources */,
 				B94008A829BB052C00ECE9E7 /* Post.swift in Sources */,
-				B94271BA29BA3AC000FF4E9D /* LandmarkList.swift in Sources */,
 				B9A904EF29BF332E00E47E2F /* signUpResponse.swift in Sources */,
 				B94271CB29BA56EB00FF4E9D /* signupButton.swift in Sources */,
 				B928716229BA27D700B0F4EA /* CircleImage.swift in Sources */,
@@ -501,7 +486,6 @@
 				B9377D7429BB8C4200F2E3C0 /* PostList.swift in Sources */,
 				B94008AD29BB09CF00ECE9E7 /* PostDetailView.swift in Sources */,
 				B9A904EB29BD6C5600E47E2F /* sendSmsResponse.swift in Sources */,
-				B9E5997F29BA387700B32B5E /* LandmarkRow.swift in Sources */,
 				B9A904F629BF458D00E47E2F /* KeyChain.swift in Sources */,
 				B928E88029BA35E7007408CD /* ModelData.swift in Sources */,
 				B94271C329BA4E8C00FF4E9D /* LoginMain.swift in Sources */,
