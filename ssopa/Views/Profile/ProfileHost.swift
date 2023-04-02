@@ -12,7 +12,7 @@ struct ProfileHost: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-                   ProfileSummary(userprofile: draftProfile)
+                   
                }
                .padding()
     }

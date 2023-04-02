@@ -32,6 +32,13 @@ struct PostDetailView: View {
                     .padding(EdgeInsets.init(top: 0, leading:0, bottom: 10, trailing: 0))
                 
                 HStack{
+                    Text(Date.fromLocalDateTime(post.modified_date)?.relativeTime() ?? "error")
+                        .font(.caption2)
+                        .fontWeight(.thin)
+                        .padding(EdgeInsets.init(top: 0, leading:0, bottom: 0, trailing: 10))
+                    
+                    Spacer()
+                    
                     Image(systemName: "heart.fill")
                         .foregroundColor(Color.ssopa_orange)
                     Text("\(post.view_cnt)")

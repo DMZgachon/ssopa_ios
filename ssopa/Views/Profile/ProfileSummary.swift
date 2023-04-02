@@ -10,25 +10,32 @@ import SwiftUI
 import SwiftUI
 
 struct ProfileSummary: View {
-    var userprofile: UserProfile
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(userprofile.nickname)
-                    .bold()
-                    .font(.title)
-
-             
-                Text("역할: \(userprofile.Role.rawValue)")
+        VStack {
+            HStack{
+                VStack(alignment: .leading){
+                    Text("하이하이")
+                    
+                }
+                .padding(EdgeInsets.init(top: 0, leading:10, bottom: 0, trailing: 0))
+                Spacer()
+                
+                HStack{
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(Color.ssopa_orange)
+                    
+                    
+                }
                 
             }
         }
+        
     }
 }
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary(userprofile: UserProfile.default)
+        ProfileSummary()
     }
 }

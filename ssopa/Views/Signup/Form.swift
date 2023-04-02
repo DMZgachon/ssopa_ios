@@ -11,12 +11,13 @@ struct Form: View {
     @State private var email = ""
     @State var showAlert: Bool = false
     @State var AlertTitle: String  = ""
-    @ObservedObject private var DuplicatedVM: CheckDuplicatedEmailViewModel
+    let httpClient = HTTPClient()
+//    @ObservedObject private var DuplicatedVM: CheckDuplicatedEmailViewModel
 
     
-    init() {
-        self.DuplicatedVM = CheckDuplicatedEmailViewModel()
-    }
+//    init() {
+//        self.DuplicatedVM = CheckDuplicatedEmailViewModel()
+//    }
     
     var body: some View {
         
@@ -82,17 +83,35 @@ struct Form: View {
     }
     
     func continue_register() {
-        if textIsAppropriate()==true && DuplicatedVM.isDuplicated==true{
-            if(DuplicatedVM.emailResponse?.status==200){
-                self.switchToPasswordForm_Login()
-            }
-            }
-        else if(textIsAppropriate()==true && DuplicatedVM.isDuplicated==false){
-            if(DuplicatedVM.emailResponse?.status==200){
-                self.switchToPasswordForm_Signup(email: email)
+        if textIsAppropriate()==true{
+            checkDuplicated(email){response in
+                if response{
+                    self.switchToPasswordForm_Login()
+                }else{
+                    self.switchToPasswordForm_Signup(email: email)
+                }
             }
         }
+        
+    }
+    
+    func checkDuplicated(_ email: String,completion: @escaping (Bool) -> Void){
+        httpClient.checkDuplicatedEmail(email) { result in
+            switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        if(response.data.duplicated==true){
+                            completion(true)
+                        }else{
+                            completion(false)
+                        }
+                    }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
+    }
     
     
     func hideKeyboard() {
@@ -102,7 +121,6 @@ struct Form: View {
     func textIsAppropriate() -> Bool {
         
         if checkEmail(str: email){
-            DuplicatedVM.checkDuplicated(email)
             return true
         }
         else{
@@ -192,7 +210,9 @@ struct passwordForm_Login: View {
                 
                 
                 DispatchQueue.main.async {
-                    
+                    if(keychain.addItem(key: "email", pwd: email)&&keychain.addItem(key: "password", pwd: password)){
+                        
+                    }
                     print("Response message: \(response)")
                     if(keychain.addItem(key: "refreshToken", pwd: response.data.refreshToken) == true && keychain.addItem(key: "accessToken", pwd: response.data.accessToken)){
                         switchToMain()

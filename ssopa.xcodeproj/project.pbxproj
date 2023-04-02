@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B919D84429C17A3600AEE115 /* getNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */; };
+		539D53BE2BB41417272B2380 /* Pods_ssopa_ssopaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E58F8B90BAFD7FF25805E /* Pods_ssopa_ssopaUITests.framework */; };
+		B902D65B29D99D54009B498A /* getNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D65A29D99D54009B498A /* getNicknameViewModel.swift */; };
 		B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713729BA165800B0F4EA /* ssopaApp.swift */; };
 		B928713A29BA165800B0F4EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713929BA165800B0F4EA /* ContentView.swift */; };
 		B928713C29BA165A00B0F4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928713B29BA165A00B0F4EA /* Assets.xcassets */; };
@@ -47,8 +48,21 @@
 		B9A904F829BF60ED00E47E2F /* writePostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904F729BF60ED00E47E2F /* writePostForm.swift */; };
 		B9ABBEAB29BB78540072F603 /* postData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9ABBEAA29BB78540072F603 /* postData.json */; };
 		B9ABBEAD29BB79950072F603 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABBEAC29BB79950072F603 /* PostRow.swift */; };
+		B9B6FD0429D55CFC008ABC4C /* refreshTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0329D55CFC008ABC4C /* refreshTokenRequest.swift */; };
+		B9B6FD0629D564E9008ABC4C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0529D564E9008ABC4C /* Date.swift */; };
+		B9B6FD0929D6D4D9008ABC4C /* OpenChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0829D6D4D9008ABC4C /* OpenChatView.swift */; };
+		B9B6FD0B29D6D5ED008ABC4C /* chatVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0A29D6D5ED008ABC4C /* chatVm.swift */; };
+		B9B6FD0D29D6D714008ABC4C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0C29D6D714008ABC4C /* Chat.swift */; };
+		B9B6FD0F29D6DA24008ABC4C /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD0E29D6DA24008ABC4C /* ChatRow.swift */; };
+		B9B6FD1129D6DC97008ABC4C /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD1029D6DC97008ABC4C /* ChatDetailView.swift */; };
+		B9B6FD1329D6DED0008ABC4C /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD1229D6DED0008ABC4C /* ChatMessage.swift */; };
+		B9B6FD1729D6E436008ABC4C /* chatMessageVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FD1629D6E436008ABC4C /* chatMessageVm.swift */; };
 		B9C62EC129CDFBFC00426747 /* postVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC029CDFBFC00426747 /* postVm.swift */; };
 		B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC229CDFF0B00426747 /* freeBoardView.swift */; };
+		B9C62EC529CEDC7D00426747 /* postRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC429CEDC7D00426747 /* postRequest.swift */; };
+		B9C62EC729CF24EE00426747 /* postResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC629CF24ED00426747 /* postResponse.swift */; };
+		E3C4032681D086B355937D79 /* Pods_ssopa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */; };
+		FC0821BBD518E89523FD7155 /* Pods_ssopaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +83,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = getNicknameViewModel.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/getNicknameViewModel.swift"; sourceTree = "<group>"; };
+		028E58F8B90BAFD7FF25805E /* Pods_ssopa_ssopaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ssopa_ssopaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		164A43F70009C3ED06CBE959 /* Pods-ssopa-ssopaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa-ssopaUITests.release.xcconfig"; path = "Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ssopa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ssopaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97F29CFF75BEC86F928D3470 /* Pods-ssopa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa.release.xcconfig"; path = "Target Support Files/Pods-ssopa/Pods-ssopa.release.xcconfig"; sourceTree = "<group>"; };
+		B902D65A29D99D54009B498A /* getNicknameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getNicknameViewModel.swift; sourceTree = "<group>"; };
 		B928713429BA165800B0F4EA /* ssopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928713729BA165800B0F4EA /* ssopaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssopaApp.swift; sourceTree = "<group>"; };
 		B928713929BA165800B0F4EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,8 +132,23 @@
 		B9A904F729BF60ED00E47E2F /* writePostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writePostForm.swift; sourceTree = "<group>"; };
 		B9ABBEAA29BB78540072F603 /* postData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = postData.json; sourceTree = "<group>"; };
 		B9ABBEAC29BB79950072F603 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
+		B9B6FD0329D55CFC008ABC4C /* refreshTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = refreshTokenRequest.swift; sourceTree = "<group>"; };
+		B9B6FD0529D564E9008ABC4C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		B9B6FD0829D6D4D9008ABC4C /* OpenChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenChatView.swift; sourceTree = "<group>"; };
+		B9B6FD0A29D6D5ED008ABC4C /* chatVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatVm.swift; sourceTree = "<group>"; };
+		B9B6FD0C29D6D714008ABC4C /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		B9B6FD0E29D6DA24008ABC4C /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		B9B6FD1029D6DC97008ABC4C /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		B9B6FD1229D6DED0008ABC4C /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		B9B6FD1629D6E436008ABC4C /* chatMessageVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatMessageVm.swift; sourceTree = "<group>"; };
 		B9C62EC029CDFBFC00426747 /* postVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postVm.swift; sourceTree = "<group>"; };
 		B9C62EC229CDFF0B00426747 /* freeBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeBoardView.swift; sourceTree = "<group>"; };
+		B9C62EC429CEDC7D00426747 /* postRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postRequest.swift; sourceTree = "<group>"; };
+		B9C62EC629CF24ED00426747 /* postResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postResponse.swift; sourceTree = "<group>"; };
+		D0039C46D8EB1AD4A700B3A3 /* Pods-ssopa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa.debug.xcconfig"; path = "Target Support Files/Pods-ssopa/Pods-ssopa.debug.xcconfig"; sourceTree = "<group>"; };
+		DF29F5086E3F6855F644A13B /* Pods-ssopaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopaTests.release.xcconfig"; path = "Target Support Files/Pods-ssopaTests/Pods-ssopaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E079BCF2D26163B07B6D2C37 /* Pods-ssopa-ssopaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa-ssopaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF9231388B87DCB783A5BF98 /* Pods-ssopaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopaTests.debug.xcconfig"; path = "Target Support Files/Pods-ssopaTests/Pods-ssopaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C4032681D086B355937D79 /* Pods_ssopa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0821BBD518E89523FD7155 /* Pods_ssopaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +172,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539D53BE2BB41417272B2380 /* Pods_ssopa_ssopaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78D9636AD5C372145E53A07F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0039C46D8EB1AD4A700B3A3 /* Pods-ssopa.debug.xcconfig */,
+				97F29CFF75BEC86F928D3470 /* Pods-ssopa.release.xcconfig */,
+				E079BCF2D26163B07B6D2C37 /* Pods-ssopa-ssopaUITests.debug.xcconfig */,
+				164A43F70009C3ED06CBE959 /* Pods-ssopa-ssopaUITests.release.xcconfig */,
+				EF9231388B87DCB783A5BF98 /* Pods-ssopaTests.debug.xcconfig */,
+				DF29F5086E3F6855F644A13B /* Pods-ssopaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B928712B29BA165800B0F4EA = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +199,8 @@
 				B928714729BA165A00B0F4EA /* ssopaTests */,
 				B928715129BA165A00B0F4EA /* ssopaUITests */,
 				B928713529BA165800B0F4EA /* Products */,
+				78D9636AD5C372145E53A07F /* Pods */,
+				D84D5A17BBFB6D43266D90A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +217,7 @@
 		B928713629BA165800B0F4EA /* ssopa */ = {
 			isa = PBXGroup;
 			children = (
+				B928E88229BA3784007408CD /* Model */,
 				B9C62EBF29CDFBCE00426747 /* ViewModel */,
 				B9A904F429BF458100E47E2F /* Auth */,
 				B940089F29BAFFF000ECE9E7 /* Info.plist */,
@@ -172,7 +225,6 @@
 				B928E88129BA3777007408CD /* Views */,
 				B928E88329BA3790007408CD /* Resources */,
 				B928713729BA165800B0F4EA /* ssopaApp.swift */,
-				B928E88229BA3784007408CD /* Model */,
 				B928713B29BA165A00B0F4EA /* Assets.xcassets */,
 				B928713D29BA165A00B0F4EA /* Preview Content */,
 			);
@@ -207,6 +259,7 @@
 		B928E88129BA3777007408CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9B6FD0729D6D4C2008ABC4C /* Chat */,
 				B9377D7529BB91BA00F2E3C0 /* Main */,
 				B94008AB29BB09B700ECE9E7 /* Post */,
 				B94271D329BA632400FF4E9D /* Signup */,
@@ -221,19 +274,14 @@
 		B928E88229BA3784007408CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B919D84329C17A3600AEE115 /* getNicknameViewModel.swift */,
+				B9B6FD1429D6E102008ABC4C /* Chat */,
 				B928E87D29BA34B2007408CD /* Landmark.swift */,
 				B928E87F29BA35E7007408CD /* ModelData.swift */,
 				B94271CC29BA5F9000FF4E9D /* UserProfile.swift */,
 				B94008A529BB022900ECE9E7 /* CheckDuplicateEmailResponse.swift */,
-				B94008A729BB052C00ECE9E7 /* Post.swift */,
-				B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */,
+				B9B6FD1529D6E11B008ABC4C /* Post */,
+				B9C37B0A29D74698006DE7E2 /* Auth */,
 				B94008B329BB384B00ECE9E7 /* getNicknameResponse.swift */,
-				B9A904EA29BD6C5600E47E2F /* sendSmsResponse.swift */,
-				B9A904EC29BEBFB900E47E2F /* signUpRequest.swift */,
-				B9A904EE29BF332E00E47E2F /* signUpResponse.swift */,
-				B9A904F029BF42CF00E47E2F /* loginRequest.swift */,
-				B9A904F229BF431B00E47E2F /* loginResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				B94008A329BB00DB00ECE9E7 /* URLExtensions.swift */,
+				B9B6FD0529D564E9008ABC4C /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,12 +379,68 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		B9B6FD0729D6D4C2008ABC4C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6FD0829D6D4D9008ABC4C /* OpenChatView.swift */,
+				B9B6FD0E29D6DA24008ABC4C /* ChatRow.swift */,
+				B9B6FD1029D6DC97008ABC4C /* ChatDetailView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		B9B6FD1429D6E102008ABC4C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6FD1229D6DED0008ABC4C /* ChatMessage.swift */,
+				B9B6FD0C29D6D714008ABC4C /* Chat.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		B9B6FD1529D6E11B008ABC4C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B94008A729BB052C00ECE9E7 /* Post.swift */,
+				B9C62EC429CEDC7D00426747 /* postRequest.swift */,
+				B9C62EC629CF24ED00426747 /* postResponse.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		B9C37B0A29D74698006DE7E2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B94008AE29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift */,
+				B9A904EA29BD6C5600E47E2F /* sendSmsResponse.swift */,
+				B9A904EC29BEBFB900E47E2F /* signUpRequest.swift */,
+				B9A904EE29BF332E00E47E2F /* signUpResponse.swift */,
+				B9A904F029BF42CF00E47E2F /* loginRequest.swift */,
+				B9A904F229BF431B00E47E2F /* loginResponse.swift */,
+				B9B6FD0329D55CFC008ABC4C /* refreshTokenRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		B9C62EBF29CDFBCE00426747 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B902D65A29D99D54009B498A /* getNicknameViewModel.swift */,
 				B9C62EC029CDFBFC00426747 /* postVm.swift */,
+				B9B6FD0A29D6D5ED008ABC4C /* chatVm.swift */,
+				B9B6FD1629D6E436008ABC4C /* chatMessageVm.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D84D5A17BBFB6D43266D90A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */,
+				028E58F8B90BAFD7FF25805E /* Pods_ssopa_ssopaUITests.framework */,
+				396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +450,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B928715829BA165A00B0F4EA /* Build configuration list for PBXNativeTarget "ssopa" */;
 			buildPhases = (
+				35B8257F26DA855E374F50B8 /* [CP] Check Pods Manifest.lock */,
 				B928713029BA165800B0F4EA /* Sources */,
 				B928713129BA165800B0F4EA /* Frameworks */,
 				B928713229BA165800B0F4EA /* Resources */,
@@ -362,6 +468,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B928715B29BA165A00B0F4EA /* Build configuration list for PBXNativeTarget "ssopaTests" */;
 			buildPhases = (
+				4BFF806004678796341E3E8C /* [CP] Check Pods Manifest.lock */,
 				B928714029BA165A00B0F4EA /* Sources */,
 				B928714129BA165A00B0F4EA /* Frameworks */,
 				B928714229BA165A00B0F4EA /* Resources */,
@@ -380,6 +487,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B928715E29BA165A00B0F4EA /* Build configuration list for PBXNativeTarget "ssopaUITests" */;
 			buildPhases = (
+				E8A7C5CA95DC5B44A8776A41 /* [CP] Check Pods Manifest.lock */,
 				B928714A29BA165A00B0F4EA /* Sources */,
 				B928714B29BA165A00B0F4EA /* Frameworks */,
 				B928714C29BA165A00B0F4EA /* Resources */,
@@ -465,34 +573,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35B8257F26DA855E374F50B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ssopa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BFF806004678796341E3E8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ssopaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A7C5CA95DC5B44A8776A41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ssopa-ssopaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B928713029BA165800B0F4EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B9A904F129BF42CF00E47E2F /* loginRequest.swift in Sources */,
+				B9B6FD0F29D6DA24008ABC4C /* ChatRow.swift in Sources */,
 				B94271D029BA608A00FF4E9D /* ProfileHost.swift in Sources */,
+				B9B6FD0929D6D4D9008ABC4C /* OpenChatView.swift in Sources */,
 				B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */,
 				B928713A29BA165800B0F4EA /* ContentView.swift in Sources */,
 				B9A904F829BF60ED00E47E2F /* writePostForm.swift in Sources */,
+				B9C62EC729CF24EE00426747 /* postResponse.swift in Sources */,
 				B94271D229BA611000FF4E9D /* ProfileSummary.swift in Sources */,
 				B9A904F329BF431B00E47E2F /* loginResponse.swift in Sources */,
 				B94271C529BA50AB00FF4E9D /* LoginButton.swift in Sources */,
 				B94271D529BA633700FF4E9D /* Form.swift in Sources */,
+				B9B6FD0B29D6D5ED008ABC4C /* chatVm.swift in Sources */,
+				B9B6FD0629D564E9008ABC4C /* Date.swift in Sources */,
 				B94271D829BA6DD600FF4E9D /* HTTPClient.swift in Sources */,
 				B94008A629BB022900ECE9E7 /* CheckDuplicateEmailResponse.swift in Sources */,
 				B94008B429BB384B00ECE9E7 /* getNicknameResponse.swift in Sources */,
 				B9ABBEAD29BB79950072F603 /* PostRow.swift in Sources */,
+				B9B6FD1329D6DED0008ABC4C /* ChatMessage.swift in Sources */,
+				B902D65B29D99D54009B498A /* getNicknameViewModel.swift in Sources */,
 				B928716429BA313C00B0F4EA /* MapView.swift in Sources */,
 				B94008AF29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift in Sources */,
 				B94008A429BB00DB00ECE9E7 /* URLExtensions.swift in Sources */,
 				B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */,
 				B9C62EC129CDFBFC00426747 /* postVm.swift in Sources */,
+				B9B6FD1729D6E436008ABC4C /* chatMessageVm.swift in Sources */,
 				B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */,
 				B94271C929BA557300FF4E9D /* ColorExtension.swift in Sources */,
+				B9B6FD0429D55CFC008ABC4C /* refreshTokenRequest.swift in Sources */,
 				B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */,
-				B919D84429C17A3600AEE115 /* getNicknameViewModel.swift in Sources */,
 				B94008A829BB052C00ECE9E7 /* Post.swift in Sources */,
+				B9B6FD1129D6DC97008ABC4C /* ChatDetailView.swift in Sources */,
+				B9C62EC529CEDC7D00426747 /* postRequest.swift in Sources */,
 				B9A904EF29BF332E00E47E2F /* signUpResponse.swift in Sources */,
 				B94271CB29BA56EB00FF4E9D /* signupButton.swift in Sources */,
 				B928716229BA27D700B0F4EA /* CircleImage.swift in Sources */,
@@ -501,6 +688,7 @@
 				B94271CD29BA5F9000FF4E9D /* UserProfile.swift in Sources */,
 				B9377D7429BB8C4200F2E3C0 /* PostList.swift in Sources */,
 				B94008AD29BB09CF00ECE9E7 /* PostDetailView.swift in Sources */,
+				B9B6FD0D29D6D714008ABC4C /* Chat.swift in Sources */,
 				B9A904EB29BD6C5600E47E2F /* sendSmsResponse.swift in Sources */,
 				B9A904F629BF458D00E47E2F /* KeyChain.swift in Sources */,
 				B928E88029BA35E7007408CD /* ModelData.swift in Sources */,
@@ -657,12 +845,13 @@
 		};
 		B928715929BA165A00B0F4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0039C46D8EB1AD4A700B3A3 /* Pods-ssopa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -673,14 +862,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -691,12 +880,13 @@
 		};
 		B928715A29BA165A00B0F4EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97F29CFF75BEC86F928D3470 /* Pods-ssopa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -707,14 +897,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -725,6 +915,7 @@
 		};
 		B928715C29BA165A00B0F4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF9231388B87DCB783A5BF98 /* Pods-ssopaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -745,6 +936,7 @@
 		};
 		B928715D29BA165A00B0F4EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF29F5086E3F6855F644A13B /* Pods-ssopaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -765,6 +957,7 @@
 		};
 		B928715F29BA165A00B0F4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E079BCF2D26163B07B6D2C37 /* Pods-ssopa-ssopaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -783,6 +976,7 @@
 		};
 		B928716029BA165A00B0F4EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 164A43F70009C3ED06CBE959 /* Pods-ssopa-ssopaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

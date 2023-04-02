@@ -47,6 +47,23 @@ extension URL{
         return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/auth/login")
     }
     
+    static func forWritePost() -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/post/add")
+    }
+    
+    static func forRefreshToken() -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/auth/reissue")
+    }
+    
+    static func forLoadChats() -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/chat/rooms")
+    }
+    
+    static func forLoadMessages(_ roomId: String, _ page: Int) -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/chat/load/room/\(roomId)/\(page)")
+    }
+
+    
     
     
     

@@ -19,7 +19,6 @@ struct PostRow: View {
         
         
         VStack {
-            Divider()
             HStack{
                 VStack(alignment: .leading){
                     Text(post.title)
@@ -43,12 +42,28 @@ struct PostRow: View {
                         .font(.caption2)
                         .fontWeight(.thin)
                         .padding(EdgeInsets.init(top: 0, leading:0, bottom: 0, trailing: 10))
+                    Text(Date.fromLocalDateTime(post.modified_date)?.relativeTime() ?? "error")
+                        .font(.caption2)
+                        .fontWeight(.thin)
+                        .padding(EdgeInsets.init(top: 0, leading:0, bottom: 0, trailing: 10))
                     
                 }
                 
             }
+        }.swipeActions(allowsFullSwipe: false) {
+            Button {
+                print("Muting conversation")
+            } label: {
+                Label("Mute", systemImage: "bell.slash.fill")
+            }
+            .tint(.indigo)
+            
+            Button(role: .destructive) {
+                print("Report")
+            } label: {
+            Label("신고하기", systemImage: "exclamationmark.shield.fill")
+            }
         }
-        
         
     }
         
@@ -57,7 +72,7 @@ struct PostRow: View {
 
 
 struct PostRow_Previews: PreviewProvider {
-//    static var Post1: Post = Post(id: 1, title: "페이커 vs bts 멤버", writer: "붕붕이", content: "군대가면 누가 더 좋은 취급 받을까", view_cnt: 1, noticeYn: false, modified_date: "20220304", created_date: "20220304", deleteYn: false)
+
     static var getdata = ModelData().postdata
     static var previews: some View {
 

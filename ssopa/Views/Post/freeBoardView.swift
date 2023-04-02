@@ -11,6 +11,14 @@ struct freeBoardView: View {
     
     @EnvironmentObject var postVm: postViewModel
     @State private var page: Int = 0
+    @State private var loadedIdx : [Int:Bool] = [:]
+    
+    
+    func refreshVm(){
+        postVm.Posts = []
+        page = 0
+        loadedIdx = [:]
+    }
     
     var body: some View {
         if postVm.Posts.isEmpty {
@@ -24,8 +32,8 @@ struct freeBoardView: View {
                     }
                 }
         } else {
-                ScrollView {
-                    LazyVStack {
+                
+                    List {
                         ForEach(postVm.Posts) { item in
                             NavigationLink{
                                 PostDetailView(post: item)
@@ -37,10 +45,12 @@ struct freeBoardView: View {
                                     guard let index = postVm.Posts.firstIndex(where: { $0.id == item.id }) else { return }
                                     
                                     print("index: \(index)")
-                                    if index % 20 == 0 {
+                                    if index % 20 == 0 && loadedIdx[index] == nil {
                                         Task {
                                             do {
                                                 page=page+1
+                                                loadedIdx[index] = true
+                                                print("loading page: \(page)")
                                                 try await postVm.fetchMorePosts(page,"FREE")
                                             } catch (let error) {
                                                 print("Unable to get data : \(error)")
@@ -50,14 +60,20 @@ struct freeBoardView: View {
                                     }
                                 }
                         }
+                    }.refreshable {
+                        print("refreshing")
+                        refreshVm()
+                        
                     }
-                }
+                
             }
     }
 }
 
 struct freeBoardView_Previews: PreviewProvider {
+
     static var previews: some View {
-        freeBoardView().environmentObject(postViewModel())
+        let postVm = postViewModel()
+        freeBoardView().environmentObject(postVm)
     }
 }

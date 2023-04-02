@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isLoading: Bool = true
+    let keychain = KeyChain()// keychain 클래스
+    let httpclient = HTTPClient.shared
+    
+    
+    
     var body: some View {
-        
-        LoginMain()
+        if(keychain.getItem(key: "email") != nil&&keychain.getItem(key: "password") != nil){
+            PostList()
+        }else{
+            LoginMain()
+        }
 
     }
 }

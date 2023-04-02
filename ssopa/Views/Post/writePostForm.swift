@@ -7,17 +7,42 @@
 
 import SwiftUI
 
+enum Board: String, CaseIterable {
+    case FREE = "자유게시판"
+    case SECRET = "비밀게시판"
+    // Add more board options here
+}
+
+extension Board: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .FREE:
+            return "FREE"
+        case .SECRET:
+            return "SECRET"
+        }
+    }
+}
+
 struct writePostForm: View {
     
     @State private var content = ""
     @State private var title = ""
     @Binding var isPresented: Bool
-    @State private var selectedBoard: Board = .free
+    @State private var selectedBoard: Board = .FREE
+    let httpclient = HTTPClient.shared
     
-    enum Board: String, CaseIterable {
-        case free = "자유게시판"
-        case secret = "비밀게시판"
-        // Add more board options here
+    
+    
+    // Define the closure
+    let completionHandler: (Result<PostResponse, Error>) -> Void = { result in
+        // Handle the result
+    }
+    
+    
+    func writePost(_ category: Board,_ content: String, _ title: String){
+        let post = postRequest(title: title, category: category.description, content: content)
+        httpclient.writePost(request: post, completion: completionHandler)
     }
     
     
@@ -35,6 +60,7 @@ struct writePostForm: View {
                     Spacer()
                     Button {
                         isPresented = false
+                        writePost(selectedBoard, content, title)
                     } label: {
                         Text("글 등록")
                     }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8.0))
@@ -68,9 +94,10 @@ struct writePostForm: View {
 }
 
 struct writePostForm_Previews: PreviewProvider {
-
+    
     static var previews: some View {
-   
+        
         writePostForm(isPresented: .constant(true))
     }
+    
 }
