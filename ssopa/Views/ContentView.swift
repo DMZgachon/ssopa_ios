@@ -12,6 +12,7 @@ struct ContentView: View {
     let keychain = KeyChain()// keychain 클래스
     let httpclient = HTTPClient.shared
     
+
     
     
     var body: some View {
@@ -27,7 +28,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
             .environmentObject(postViewModel())
     }
 }

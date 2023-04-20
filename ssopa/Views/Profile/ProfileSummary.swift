@@ -10,12 +10,18 @@ import SwiftUI
 import SwiftUI
 
 struct ProfileSummary: View {
+    
+    var profile : UserProfile
+    @Binding var showFullScreenProfileImage: Bool
 
     var body: some View {
-        VStack {
             HStack{
+                profileImage(profile: profile,showFullScreenProfileImage: $showFullScreenProfileImage)
                 VStack(alignment: .leading){
-                    Text("하이하이")
+                    Text("\(profile.nickname)")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.trailing, 5)
                     
                 }
                 .padding(EdgeInsets.init(top: 0, leading:10, bottom: 0, trailing: 0))
@@ -29,13 +35,12 @@ struct ProfileSummary: View {
                 }
                 
             }
-        }
         
     }
 }
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary()
+        ProfileSummary(profile: UserProfile.defaultProfile, showFullScreenProfileImage: .constant(false))
     }
 }

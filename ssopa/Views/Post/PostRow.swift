@@ -38,7 +38,7 @@ struct PostRow: View {
                 HStack{
                     Image(systemName: "heart.fill")
                         .foregroundColor(Color.ssopa_orange)
-                    Text("\(post.view_cnt)")
+                    Text("\(post.like_cnt)")
                         .font(.caption2)
                         .fontWeight(.thin)
                         .padding(EdgeInsets.init(top: 0, leading:0, bottom: 0, trailing: 10))
@@ -73,12 +73,12 @@ struct PostRow: View {
 
 struct PostRow_Previews: PreviewProvider {
 
-    static var getdata = ModelData().postdata
+    
     static var previews: some View {
 
         Group {
-            PostRow(post: getdata.data[0])
-            PostRow(post: getdata.data[1])
+            PostRow(post: Post_Data.Post.defaultPost)
+            PostRow(post: Post_Data.Post.defaultPost)
                 }
                 .previewLayout(.fixed(width: 300, height: 70))
             

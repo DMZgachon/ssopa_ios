@@ -13,7 +13,8 @@ struct ssopaApp: App {
     @StateObject private var postVm = postViewModel()
     @StateObject private var chatVm = chatViewModel()
     @StateObject private var chatMessageVm = chatMessageViewModel()
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     
     var body: some Scene {
         WindowGroup {

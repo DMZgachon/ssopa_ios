@@ -41,7 +41,7 @@ struct Form: View {
 
                             
                         Spacer()
-                        TextField("ssopa02@dmz02.com", text: $email)
+                        TextField("이메일", text: $email)
                             .autocorrectionDisabled()
                         .keyboardType(UIKeyboardType.emailAddress)
                     }.padding()
@@ -49,6 +49,7 @@ struct Form: View {
                         .overlay(Rectangle().frame(height: 2).padding(.top, 45))
                         .foregroundColor(Color.ssopa_orange)
                         .padding(10)
+                    
                 
                 
                   
@@ -199,6 +200,36 @@ struct passwordForm_Login: View {
             window.makeKeyAndVisible()
         }
     
+    func saveProfile(){
+        httpclient.getProfile(){result in
+            switch result {
+            case .success(let response):
+                
+                
+                DispatchQueue.main.async {
+                    
+                    print("Response message: \(response)")
+
+                    do {
+                        let encoder = JSONEncoder()
+                        let userData = try encoder.encode(response.data)
+                        UserDefaults.standard.set(userData, forKey: "userProfile")
+                        switchToMain()
+                    } catch {
+                        print("Error encoding user: \(error.localizedDescription)")
+                    }
+                        }
+                
+            case .failure(let error):
+               
+                print("Error: \(error.localizedDescription)")
+            
+            }
+            
+        }
+
+    }
+    
     
     
     func sendLogin(_ email: String,_ password: String){
@@ -213,9 +244,12 @@ struct passwordForm_Login: View {
                     if(keychain.addItem(key: "email", pwd: email)&&keychain.addItem(key: "password", pwd: password)){
                         
                     }
+
+                    
                     print("Response message: \(response)")
                     if(keychain.addItem(key: "refreshToken", pwd: response.data.refreshToken) == true && keychain.addItem(key: "accessToken", pwd: response.data.accessToken)){
-                        switchToMain()
+                        saveProfile()
+                        
                     }
                         }
                 

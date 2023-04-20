@@ -17,6 +17,7 @@ struct PostList: View {
     
     @EnvironmentObject var postVm: postViewModel
     
+    
     let keychain = KeyChain()
     
     //static var getdata = ModelData().postdata
@@ -34,7 +35,8 @@ struct PostList: View {
             window.rootViewController = rootView
             window.makeKeyAndVisible()
         }
-
+    
+    
     
     var body: some View {
         
@@ -66,7 +68,7 @@ struct PostList: View {
                 .sheet(isPresented: $isPresentingWriteForm) {
                     writePostForm(isPresented: $isPresentingWriteForm)
                 }
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
                 .tabItem {
                     Image(systemName: "signpost.left.fill")
                     Text("자유게시판")
@@ -77,7 +79,7 @@ struct PostList: View {
                     // content for second tab goes here
                 }
                 .navigationTitle("비밀게시판")
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "signpost.right.fill")
                 Text("비밀게시판")
@@ -85,7 +87,7 @@ struct PostList: View {
             
             NavigationView {
                 ZStack{
-                    freeBoardView()
+                    hotBoardView()
                         .navigationTitle("핫게시판")
                     VStack {
                         Spacer()
@@ -109,7 +111,7 @@ struct PostList: View {
                 .sheet(isPresented: $isPresentingWriteForm) {
                     writePostForm(isPresented: $isPresentingWriteForm)
                 }
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "livephoto")
                 Text("핫게시판")
@@ -118,7 +120,7 @@ struct PostList: View {
             NavigationView {
                 OpenChatView()
                 .navigationTitle("오픈채팅")
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "message.fill")
                     .foregroundColor(Color.ssopa_orange)
@@ -126,18 +128,9 @@ struct PostList: View {
             }.tag(3)
             
             NavigationView {
-                List {
-                    ProfileSummary()
-                    Button("로그아웃") {
-                        HTTPClient.shared.logout(){result in
-                            if result{
-                                switchToForm()
-                            }
-                        }
-                    }
-                }
+                SettingView.shared
                 .navigationTitle("설정")
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "gear")
                     .foregroundColor(Color.ssopa_orange)
@@ -155,14 +148,12 @@ struct PostList: View {
     
     
     struct PostList_Previews: PreviewProvider {
-        static var getdata = ModelData().postdata
         static var previews: some View {
             
             // 커밋테스트
             ForEach(["iPhone SE (2nd generation)", "iPhone 14 Pro"], id: \.self) { deviceName in
                 PostList()
                     .previewDisplayName(deviceName)
-                    .environmentObject(ModelData())
                     .environmentObject(postViewModel())
                     .environmentObject(chatViewModel())
             }

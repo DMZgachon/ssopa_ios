@@ -20,6 +20,8 @@ struct freeBoardView: View {
         loadedIdx = [:]
     }
     
+    
+    
     var body: some View {
         if postVm.Posts.isEmpty {
             ProgressView()

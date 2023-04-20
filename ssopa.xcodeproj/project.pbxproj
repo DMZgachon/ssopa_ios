@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		539D53BE2BB41417272B2380 /* Pods_ssopa_ssopaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E58F8B90BAFD7FF25805E /* Pods_ssopa_ssopaUITests.framework */; };
 		B902D65B29D99D54009B498A /* getNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D65A29D99D54009B498A /* getNicknameViewModel.swift */; };
+		B902D65D29D9A07E009B498A /* profileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D65C29D9A07E009B498A /* profileImage.swift */; };
+		B902D65F29D9AFA8009B498A /* hotBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D65E29D9AFA8009B498A /* hotBoardView.swift */; };
+		B902D66229D9D40D009B498A /* profileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66129D9D40D009B498A /* profileResponse.swift */; };
+		B902D66429D9EF71009B498A /* likeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66329D9EF71009B498A /* likeResponse.swift */; };
+		B902D66629DDBD44009B498A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66529DDBD44009B498A /* SettingView.swift */; };
+		B902D66829DDC559009B498A /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66729DDC559009B498A /* FullSizeImageView.swift */; };
+		B913668B29F1519A006873D7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B913668A29F1519A006873D7 /* String.swift */; };
 		B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713729BA165800B0F4EA /* ssopaApp.swift */; };
 		B928713A29BA165800B0F4EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713929BA165800B0F4EA /* ContentView.swift */; };
 		B928713C29BA165A00B0F4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928713B29BA165A00B0F4EA /* Assets.xcassets */; };
@@ -35,10 +42,11 @@
 		B94271C929BA557300FF4E9D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271C829BA557300FF4E9D /* ColorExtension.swift */; };
 		B94271CB29BA56EB00FF4E9D /* signupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271CA29BA56EB00FF4E9D /* signupButton.swift */; };
 		B94271CD29BA5F9000FF4E9D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271CC29BA5F9000FF4E9D /* UserProfile.swift */; };
-		B94271D029BA608A00FF4E9D /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271CF29BA608A00FF4E9D /* ProfileHost.swift */; };
 		B94271D229BA611000FF4E9D /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271D129BA611000FF4E9D /* ProfileSummary.swift */; };
 		B94271D529BA633700FF4E9D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271D429BA633700FF4E9D /* Form.swift */; };
 		B94271D829BA6DD600FF4E9D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94271D729BA6DD600FF4E9D /* HTTPClient.swift */; };
+		B986A3DE29E6EE9500E89AA0 /* profileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986A3DD29E6EE9500E89AA0 /* profileDetail.swift */; };
+		B986A3E029E6F3F300E89AA0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986A3DF29E6F3F300E89AA0 /* ImagePicker.swift */; };
 		B9A904EB29BD6C5600E47E2F /* sendSmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904EA29BD6C5600E47E2F /* sendSmsResponse.swift */; };
 		B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904EC29BEBFB900E47E2F /* signUpRequest.swift */; };
 		B9A904EF29BF332E00E47E2F /* signUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A904EE29BF332E00E47E2F /* signUpResponse.swift */; };
@@ -61,6 +69,7 @@
 		B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC229CDFF0B00426747 /* freeBoardView.swift */; };
 		B9C62EC529CEDC7D00426747 /* postRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC429CEDC7D00426747 /* postRequest.swift */; };
 		B9C62EC729CF24EE00426747 /* postResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC629CF24ED00426747 /* postResponse.swift */; };
+		B9E4E08E29EC469C00E36B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E08D29EC469C00E36B45 /* AppDelegate.swift */; };
 		E3C4032681D086B355937D79 /* Pods_ssopa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */; };
 		FC0821BBD518E89523FD7155 /* Pods_ssopaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +98,13 @@
 		396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ssopaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F29CFF75BEC86F928D3470 /* Pods-ssopa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa.release.xcconfig"; path = "Target Support Files/Pods-ssopa/Pods-ssopa.release.xcconfig"; sourceTree = "<group>"; };
 		B902D65A29D99D54009B498A /* getNicknameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getNicknameViewModel.swift; sourceTree = "<group>"; };
+		B902D65C29D9A07E009B498A /* profileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileImage.swift; sourceTree = "<group>"; };
+		B902D65E29D9AFA8009B498A /* hotBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotBoardView.swift; sourceTree = "<group>"; };
+		B902D66129D9D40D009B498A /* profileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileResponse.swift; sourceTree = "<group>"; };
+		B902D66329D9EF71009B498A /* likeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeResponse.swift; sourceTree = "<group>"; };
+		B902D66529DDBD44009B498A /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		B902D66729DDC559009B498A /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
+		B913668A29F1519A006873D7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B928713429BA165800B0F4EA /* ssopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928713729BA165800B0F4EA /* ssopaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssopaApp.swift; sourceTree = "<group>"; };
 		B928713929BA165800B0F4EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,10 +135,11 @@
 		B94271C829BA557300FF4E9D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B94271CA29BA56EB00FF4E9D /* signupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupButton.swift; sourceTree = "<group>"; };
 		B94271CC29BA5F9000FF4E9D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		B94271CF29BA608A00FF4E9D /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		B94271D129BA611000FF4E9D /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		B94271D429BA633700FF4E9D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		B94271D729BA6DD600FF4E9D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		B986A3DD29E6EE9500E89AA0 /* profileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileDetail.swift; sourceTree = "<group>"; };
+		B986A3DF29E6F3F300E89AA0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B9A904EA29BD6C5600E47E2F /* sendSmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendSmsResponse.swift; sourceTree = "<group>"; };
 		B9A904EC29BEBFB900E47E2F /* signUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpRequest.swift; sourceTree = "<group>"; };
 		B9A904EE29BF332E00E47E2F /* signUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpResponse.swift; sourceTree = "<group>"; };
@@ -145,6 +162,8 @@
 		B9C62EC229CDFF0B00426747 /* freeBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeBoardView.swift; sourceTree = "<group>"; };
 		B9C62EC429CEDC7D00426747 /* postRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postRequest.swift; sourceTree = "<group>"; };
 		B9C62EC629CF24ED00426747 /* postResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postResponse.swift; sourceTree = "<group>"; };
+		B9E4E08C29EC335D00E36B45 /* ssopa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ssopa.entitlements; sourceTree = "<group>"; };
+		B9E4E08D29EC469C00E36B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0039C46D8EB1AD4A700B3A3 /* Pods-ssopa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa.debug.xcconfig"; path = "Target Support Files/Pods-ssopa/Pods-ssopa.debug.xcconfig"; sourceTree = "<group>"; };
 		DF29F5086E3F6855F644A13B /* Pods-ssopaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopaTests.release.xcconfig"; path = "Target Support Files/Pods-ssopaTests/Pods-ssopaTests.release.xcconfig"; sourceTree = "<group>"; };
 		E079BCF2D26163B07B6D2C37 /* Pods-ssopa-ssopaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssopa-ssopaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +211,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B902D66029D9D3ED009B498A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B902D66129D9D40D009B498A /* profileResponse.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		B928712B29BA165800B0F4EA = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +244,7 @@
 		B928713629BA165800B0F4EA /* ssopa */ = {
 			isa = PBXGroup;
 			children = (
+				B9E4E08C29EC335D00E36B45 /* ssopa.entitlements */,
 				B928E88229BA3784007408CD /* Model */,
 				B9C62EBF29CDFBCE00426747 /* ViewModel */,
 				B9A904F429BF458100E47E2F /* Auth */,
@@ -227,6 +255,7 @@
 				B928713729BA165800B0F4EA /* ssopaApp.swift */,
 				B928713B29BA165A00B0F4EA /* Assets.xcassets */,
 				B928713D29BA165A00B0F4EA /* Preview Content */,
+				B9E4E08D29EC469C00E36B45 /* AppDelegate.swift */,
 			);
 			path = ssopa;
 			sourceTree = "<group>";
@@ -274,6 +303,7 @@
 		B928E88229BA3784007408CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B902D66029D9D3ED009B498A /* Profile */,
 				B9B6FD1429D6E102008ABC4C /* Chat */,
 				B928E87D29BA34B2007408CD /* Landmark.swift */,
 				B928E87F29BA35E7007408CD /* ModelData.swift */,
@@ -307,6 +337,7 @@
 			children = (
 				B94008A329BB00DB00ECE9E7 /* URLExtensions.swift */,
 				B9B6FD0529D564E9008ABC4C /* Date.swift */,
+				B913668A29F1519A006873D7 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +350,8 @@
 				B9377D7329BB8C4200F2E3C0 /* PostList.swift */,
 				B9A904F729BF60ED00E47E2F /* writePostForm.swift */,
 				B9C62EC229CDFF0B00426747 /* freeBoardView.swift */,
+				B902D65E29D9AFA8009B498A /* hotBoardView.swift */,
+				B902D66529DDBD44009B498A /* SettingView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -330,6 +363,8 @@
 				B928716329BA313B00B0F4EA /* MapView.swift */,
 				B94271BD29BA472900FF4E9D /* FavoriteButton.swift */,
 				B94271C829BA557300FF4E9D /* ColorExtension.swift */,
+				B902D66729DDC559009B498A /* FullSizeImageView.swift */,
+				B986A3DF29E6F3F300E89AA0 /* ImagePicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -347,8 +382,9 @@
 		B94271CE29BA607B00FF4E9D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B94271CF29BA608A00FF4E9D /* ProfileHost.swift */,
 				B94271D129BA611000FF4E9D /* ProfileSummary.swift */,
+				B902D65C29D9A07E009B498A /* profileImage.swift */,
+				B986A3DD29E6EE9500E89AA0 /* profileDetail.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -404,6 +440,7 @@
 				B94008A729BB052C00ECE9E7 /* Post.swift */,
 				B9C62EC429CEDC7D00426747 /* postRequest.swift */,
 				B9C62EC629CF24ED00426747 /* postResponse.swift */,
+				B902D66329D9EF71009B498A /* likeResponse.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -649,7 +686,7 @@
 			files = (
 				B9A904F129BF42CF00E47E2F /* loginRequest.swift in Sources */,
 				B9B6FD0F29D6DA24008ABC4C /* ChatRow.swift in Sources */,
-				B94271D029BA608A00FF4E9D /* ProfileHost.swift in Sources */,
+				B986A3DE29E6EE9500E89AA0 /* profileDetail.swift in Sources */,
 				B9B6FD0929D6D4D9008ABC4C /* OpenChatView.swift in Sources */,
 				B9C62EC329CDFF0B00426747 /* freeBoardView.swift in Sources */,
 				B928713A29BA165800B0F4EA /* ContentView.swift in Sources */,
@@ -659,26 +696,32 @@
 				B9A904F329BF431B00E47E2F /* loginResponse.swift in Sources */,
 				B94271C529BA50AB00FF4E9D /* LoginButton.swift in Sources */,
 				B94271D529BA633700FF4E9D /* Form.swift in Sources */,
+				B913668B29F1519A006873D7 /* String.swift in Sources */,
 				B9B6FD0B29D6D5ED008ABC4C /* chatVm.swift in Sources */,
 				B9B6FD0629D564E9008ABC4C /* Date.swift in Sources */,
 				B94271D829BA6DD600FF4E9D /* HTTPClient.swift in Sources */,
 				B94008A629BB022900ECE9E7 /* CheckDuplicateEmailResponse.swift in Sources */,
 				B94008B429BB384B00ECE9E7 /* getNicknameResponse.swift in Sources */,
+				B902D66229D9D40D009B498A /* profileResponse.swift in Sources */,
+				B902D65F29D9AFA8009B498A /* hotBoardView.swift in Sources */,
 				B9ABBEAD29BB79950072F603 /* PostRow.swift in Sources */,
 				B9B6FD1329D6DED0008ABC4C /* ChatMessage.swift in Sources */,
 				B902D65B29D99D54009B498A /* getNicknameViewModel.swift in Sources */,
 				B928716429BA313C00B0F4EA /* MapView.swift in Sources */,
 				B94008AF29BB100600ECE9E7 /* CheckDupliatedEmailViewModel.swift in Sources */,
 				B94008A429BB00DB00ECE9E7 /* URLExtensions.swift in Sources */,
+				B902D65D29D9A07E009B498A /* profileImage.swift in Sources */,
 				B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */,
 				B9C62EC129CDFBFC00426747 /* postVm.swift in Sources */,
 				B9B6FD1729D6E436008ABC4C /* chatMessageVm.swift in Sources */,
 				B94271BE29BA472900FF4E9D /* FavoriteButton.swift in Sources */,
 				B94271C929BA557300FF4E9D /* ColorExtension.swift in Sources */,
 				B9B6FD0429D55CFC008ABC4C /* refreshTokenRequest.swift in Sources */,
+				B902D66629DDBD44009B498A /* SettingView.swift in Sources */,
 				B9A904ED29BEBFB900E47E2F /* signUpRequest.swift in Sources */,
 				B94008A829BB052C00ECE9E7 /* Post.swift in Sources */,
 				B9B6FD1129D6DC97008ABC4C /* ChatDetailView.swift in Sources */,
+				B902D66829DDC559009B498A /* FullSizeImageView.swift in Sources */,
 				B9C62EC529CEDC7D00426747 /* postRequest.swift in Sources */,
 				B9A904EF29BF332E00E47E2F /* signUpResponse.swift in Sources */,
 				B94271CB29BA56EB00FF4E9D /* signupButton.swift in Sources */,
@@ -689,9 +732,12 @@
 				B9377D7429BB8C4200F2E3C0 /* PostList.swift in Sources */,
 				B94008AD29BB09CF00ECE9E7 /* PostDetailView.swift in Sources */,
 				B9B6FD0D29D6D714008ABC4C /* Chat.swift in Sources */,
+				B902D66429D9EF71009B498A /* likeResponse.swift in Sources */,
+				B9E4E08E29EC469C00E36B45 /* AppDelegate.swift in Sources */,
 				B9A904EB29BD6C5600E47E2F /* sendSmsResponse.swift in Sources */,
 				B9A904F629BF458D00E47E2F /* KeyChain.swift in Sources */,
 				B928E88029BA35E7007408CD /* ModelData.swift in Sources */,
+				B986A3E029E6F3F300E89AA0 /* ImagePicker.swift in Sources */,
 				B94271C329BA4E8C00FF4E9D /* LoginMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,8 +896,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = ssopa/ssopa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -869,7 +916,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -885,8 +932,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = ssopa/ssopa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -904,7 +952,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

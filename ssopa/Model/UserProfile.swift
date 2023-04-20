@@ -7,18 +7,27 @@
 
 import Foundation
 
-struct UserProfile {
+struct UserProfile: Identifiable,Codable,Hashable{
+    
+    var email: String
     var nickname: String
-    var school : String
-    var Role = Role.user
+    var profileImage: URL?
+    var authority: Authority
+    
+    var id: String {
+            return email
+        }
 
 
-    static let `default` = UserProfile(nickname: "행복한 물고기",school: "남악고등학교")
-
-    enum Role: String, CaseIterable, Identifiable {
-        case user = "🌷"
-        case admin = "🌞"
-
-        var id: String { rawValue }
+    static let defaultProfile = UserProfile(email: "ssohye@icloud.com", nickname: "행복한 물고기",profileImage: URL(string: "https://cdn.mhns.co.kr/news/photo/202212/539489_655354_1316.jpg"), authority: UserProfile.Authority.ROLE_USER)
+    
+    
+    enum Authority: String,Codable{
+        case ROLE_ADMIN
+        case ROLE_USER
     }
+        
+                        
+
+   
 }

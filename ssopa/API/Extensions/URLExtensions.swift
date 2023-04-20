@@ -59,9 +59,36 @@ extension URL{
         return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/chat/rooms")
     }
     
+    static func forLoadHotPost() -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/post/hot")
+    }
+    
+    static func forGetProfile() -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/member/me")
+    }
+    
     static func forLoadMessages(_ roomId: String, _ page: Int) -> URL? {
         return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/chat/load/room/\(roomId)/\(page)")
     }
+    
+    static func forSendLike(_ postId: Int) -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/post/heart/\(postId)")
+    }
+    
+    static func forRegisterToken(_ token: String) -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/auth/registertoken?deviceToken=\(token)")
+    }
+    
+
+    static func forPush(notice: String) -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/member/push?notice=\(notice)".encodeUrl()!)
+    }
+    
+    static func forSyncToken(_ token: String) -> URL? {
+        return URL(string: "https://\(Constants.IP_ADDRESS):\(Constants.PORT_NUM)/api/member/synctoken?deviceToken=\(token)")
+    }
+    
+
 
     
     
