@@ -1,0 +1,6 @@
+framework module Pods_ssopaTests {
+  umbrella header "Pods-ssopaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
