@@ -3,6 +3,8 @@
 
 target 'ssopa' do
   # Comment the next line if you don't want to use dynamic frameworks
+  pod "StompClientLib"
+  pod 'SocketRocket'
   use_frameworks!
 
  

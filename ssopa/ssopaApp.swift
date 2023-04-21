@@ -12,7 +12,7 @@ struct ssopaApp: App {
     @StateObject private var modelData = ModelData()
     @StateObject private var postVm = postViewModel()
     @StateObject private var chatVm = chatViewModel()
-    @StateObject private var chatMessageVm = chatMessageViewModel()
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     
@@ -22,6 +22,8 @@ struct ssopaApp: App {
                 .environmentObject(modelData)
                 .environmentObject(postVm)
                 .environmentObject(chatVm)
+                .environmentObject(chatMessageViewModel())
+                
         }
     }
 }

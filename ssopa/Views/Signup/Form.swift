@@ -12,12 +12,7 @@ struct Form: View {
     @State var showAlert: Bool = false
     @State var AlertTitle: String  = ""
     let httpClient = HTTPClient()
-//    @ObservedObject private var DuplicatedVM: CheckDuplicatedEmailViewModel
 
-    
-//    init() {
-//        self.DuplicatedVM = CheckDuplicatedEmailViewModel()
-//    }
     
     var body: some View {
         
@@ -25,7 +20,7 @@ struct Form: View {
         
             VStack {
                     Spacer()
-                    //Text(DuplicatedVM.isDuplicated ? "중복":"비중복")
+
                     Text("이메일을 입력해주세요.")
                         .font(.system(size: 26))
                         .fontWeight(.bold)

@@ -16,6 +16,7 @@
 		B902D66629DDBD44009B498A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66529DDBD44009B498A /* SettingView.swift */; };
 		B902D66829DDC559009B498A /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902D66729DDC559009B498A /* FullSizeImageView.swift */; };
 		B913668B29F1519A006873D7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B913668A29F1519A006873D7 /* String.swift */; };
+		B913669129F1886E006873D7 /* stompClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B913669029F1886E006873D7 /* stompClient.swift */; };
 		B928713829BA165800B0F4EA /* ssopaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713729BA165800B0F4EA /* ssopaApp.swift */; };
 		B928713A29BA165800B0F4EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928713929BA165800B0F4EA /* ContentView.swift */; };
 		B928713C29BA165A00B0F4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928713B29BA165A00B0F4EA /* Assets.xcassets */; };
@@ -70,7 +71,7 @@
 		B9C62EC529CEDC7D00426747 /* postRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC429CEDC7D00426747 /* postRequest.swift */; };
 		B9C62EC729CF24EE00426747 /* postResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C62EC629CF24ED00426747 /* postResponse.swift */; };
 		B9E4E08E29EC469C00E36B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E08D29EC469C00E36B45 /* AppDelegate.swift */; };
-		E3C4032681D086B355937D79 /* Pods_ssopa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */; };
+		B9EC8AA929F23C9B001FA85B /* Pods_ssopa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275659C94F7E8AB4C98BE74C /* Pods_ssopa.framework */; };
 		FC0821BBD518E89523FD7155 /* Pods_ssopaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396617EB4B6DAFE74E5FFEEA /* Pods_ssopaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		B902D66529DDBD44009B498A /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		B902D66729DDC559009B498A /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
 		B913668A29F1519A006873D7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B913669029F1886E006873D7 /* stompClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stompClient.swift; sourceTree = "<group>"; };
 		B928713429BA165800B0F4EA /* ssopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928713729BA165800B0F4EA /* ssopaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssopaApp.swift; sourceTree = "<group>"; };
 		B928713929BA165800B0F4EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C4032681D086B355937D79 /* Pods_ssopa.framework in Frameworks */,
+				B9EC8AA929F23C9B001FA85B /* Pods_ssopa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +405,7 @@
 				B94008A229BB00C400ECE9E7 /* Extensions */,
 				B94271D729BA6DD600FF4E9D /* HTTPClient.swift */,
 				B94008A029BB005900ECE9E7 /* Constants.swift */,
+				B913669029F1886E006873D7 /* stompClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				B928713029BA165800B0F4EA /* Sources */,
 				B928713129BA165800B0F4EA /* Frameworks */,
 				B928713229BA165800B0F4EA /* Resources */,
+				7224A4DA74466CF37EF7AA2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,6 +532,7 @@
 				B928714A29BA165A00B0F4EA /* Sources */,
 				B928714B29BA165A00B0F4EA /* Frameworks */,
 				B928714C29BA165A00B0F4EA /* Resources */,
+				53D8C5742DC3A6D312777702 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -655,6 +660,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		53D8C5742DC3A6D312777702 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ssopa-ssopaUITests/Pods-ssopa-ssopaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7224A4DA74466CF37EF7AA2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ssopa/Pods-ssopa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ssopa/Pods-ssopa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ssopa/Pods-ssopa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E8A7C5CA95DC5B44A8776A41 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -738,6 +777,7 @@
 				B9A904F629BF458D00E47E2F /* KeyChain.swift in Sources */,
 				B928E88029BA35E7007408CD /* ModelData.swift in Sources */,
 				B986A3E029E6F3F300E89AA0 /* ImagePicker.swift in Sources */,
+				B913669129F1886E006873D7 /* stompClient.swift in Sources */,
 				B94271C329BA4E8C00FF4E9D /* LoginMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,7 +938,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ssopa/ssopa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -916,7 +956,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -934,7 +974,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ssopa/ssopa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ssopa/Preview Content\"";
 				DEVELOPMENT_TEAM = CFQ4ZSUWR7;
 				ENABLE_PREVIEWS = YES;
@@ -952,7 +992,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = dmz.ssopa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

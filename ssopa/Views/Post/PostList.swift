@@ -17,6 +17,11 @@ struct PostList: View {
     
     @EnvironmentObject var postVm: postViewModel
     
+    @EnvironmentObject var chatMessageVm: chatMessageViewModel
+    
+    
+    
+
     
     let keychain = KeyChain()
     

@@ -13,7 +13,6 @@ struct freeBoardView: View {
     @State private var page: Int = 0
     @State private var loadedIdx : [Int:Bool] = [:]
     
-    
     func refreshVm(){
         postVm.Posts = []
         page = 0
@@ -62,7 +61,9 @@ struct freeBoardView: View {
                                     }
                                 }
                         }
-                    }.refreshable {
+                        
+                    }
+                    .refreshable {
                         print("refreshing")
                         refreshVm()
                         

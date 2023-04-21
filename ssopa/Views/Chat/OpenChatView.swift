@@ -10,7 +10,7 @@ import SwiftUI
 struct OpenChatView: View {
     
     @EnvironmentObject var chatVm: chatViewModel
-    
+
     func refreshVm(){
         chatVm.Chats=[]
 
@@ -54,6 +54,7 @@ struct OpenChatView_Previews: PreviewProvider {
     static var previews: some View {
         let chatVm = chatViewModel()
         OpenChatView().environmentObject(chatVm)
+            .environmentObject(chatMessageViewModel())
     }
 }
 

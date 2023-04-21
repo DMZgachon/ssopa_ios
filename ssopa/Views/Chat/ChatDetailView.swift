@@ -17,20 +17,17 @@ struct ChatDetailView: View {
     @State private var loadedIdx: [Int: Bool] = [:]
     private let keychain = KeyChain()
     
-    var chatMessageVm: chatMessageViewModel
+    @EnvironmentObject var chatMessageVm: chatMessageViewModel
     
     
     
-    
-    
-    init(chatRoom: Chat) {
-        self.chatRoom = chatRoom
-        self.chatMessageVm = chatMessageViewModel()
-    }
+
     
     private func sendMessage() {
         
+        chatMessageVm.sendMessage(content: newMessage)
         newMessage = ""
+        
     }
 
 
@@ -39,6 +36,9 @@ struct ChatDetailView: View {
     
     var body: some View {
         VStack {
+            
+            Text(chatMessageVm.isConnected ? "연결됨: \(chatRoom.roomId)":"연결 끊김: \(chatRoom.roomId)")
+            
             if chatMessageVm.Messages.isEmpty {
                 ProgressView()
                     .task {
@@ -49,14 +49,25 @@ struct ChatDetailView: View {
                         }
                     }
             } else {
-                List(chatMessageVm.Messages) { item in
-                    HStack {
-                        Text("\(item.sender ?? "[로딩]"):")
-                                .bold()
-                                .foregroundColor(item.type.rawValue == "ENTER" ? .blue : .black)
-                        Text("\(item.message ?? "[로딩]")")
-                                  }
-                    
+                
+                ScrollViewReader { proxy in
+                    List(chatMessageVm.Messages) { item in
+                        HStack {
+                            Text("\(item.message_id)")
+                            Text("\(item.sender ?? "[로딩]"):")
+                                    .bold()
+                                    .foregroundColor(item.type.rawValue == "ENTER" ? .blue : .black)
+                            Text("\(item.message ?? "[로딩]")")
+                                      }
+                        
+                    }.onChange(of: chatMessageVm.isNewMsgExist) { value in
+                        if value {
+                            withAnimation {
+                                proxy.scrollTo(chatMessageVm.Messages.last?.message_id, anchor: .bottom)
+                            }
+                            chatMessageVm.isNewMsgExist = false
+                        }
+                    }
                 }
             }
         
@@ -76,10 +87,12 @@ struct ChatDetailView: View {
             
             
         }.onAppear{
-            
+            chatMessageVm.setroom(chatRoom.roomId)
+            chatMessageVm.registerSocket()
             
         }.onDisappear{
-          
+            chatMessageVm.clearMsg()
+            chatMessageVm.disconnect()
         }.navigationTitle(chatRoom.roomName)
         .navigationBarTitleDisplayMode(.inline)
         
@@ -94,7 +107,7 @@ struct ChatDetailView: View {
     
     struct ChatDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            ChatDetailView(chatRoom: Chat(roomId: "340f90f1-7d01-4e5e-ad4d-d8c2f84e8238", roomName: "20세 이하만", founder_id:45, created_Date: [2022,03,02,04,03,12,443445]))
+            ChatDetailView(chatRoom: Chat(roomId: "340f90f1-7d01-4e5e-ad4d-d8c2f84e8238", roomName: "20세 이하만", founder_id:45, created_Date: [2022,03,02,04,03,12,443445])).environmentObject(chatMessageViewModel())
         }
     }
 }

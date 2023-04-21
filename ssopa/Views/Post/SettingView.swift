@@ -14,6 +14,8 @@ struct SettingView: View {
     // Add a new @State property to track whether the full-size image should be displayed
     @State private var showFullScreenProfileImage = false
     
+    @EnvironmentObject var chatMessageVm: chatMessageViewModel
+    
     
     func switchToForm() {
         
@@ -62,7 +64,7 @@ struct SettingView: View {
                     }
                 }
                 
-
+                //Text(self.chatMessageVm.isConnected ? "연결됨" : "연결 끊김")
 
             }.overlay(
                 FullSizeImageView(image_url: getProfile().profileImage!, showFullScreenProfileImage: $showFullScreenProfileImage)
@@ -72,6 +74,6 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        SettingView().environmentObject(chatMessageViewModel())
     }
 }
